@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/fcis_logo"
+        android:contentDescription="FCIS Logo"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FCIS Schedule Tracker"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Your Grade:"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/gradeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:background="@drawable/spinner_background"/>
+
+    <TextView
+        android:id="@+id/specializationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Your Specialization:"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <Spinner
+        android:id="@+id/specializationSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:background="@drawable/spinner_background"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/viewScheduleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Schedule"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:background="@drawable/button_background"/>
+
+</LinearLayout>
