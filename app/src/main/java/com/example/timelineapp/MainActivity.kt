@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 class MainActivity : AppCompatActivity() {
     private lateinit var gradeSpinner: Spinner
     private lateinit var specializationSpinner: Spinner
@@ -18,7 +18,13 @@ class MainActivity : AppCompatActivity() {
     
     private var selectedGrade = 1
     private var selectedSpecialization = "CS"
-    
+    private fun showGraduationMessage() {
+        Toast.makeText(
+            this@MainActivity,
+            "Senior vibes only. Let's finish strong. \uD83D\uDCBB\uD83D\uDD25",
+            Toast.LENGTH_LONG
+        ).show()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,16 +58,17 @@ class MainActivity : AppCompatActivity() {
                 
                 // Show specialization options only for 4th year
                 if (selectedGrade == 4) {
+                    showGraduationMessage()
                     specializationLabel.visibility = View.VISIBLE
                     specializationSpinner.visibility = View.VISIBLE
+
                 } else {
                     specializationLabel.visibility = View.GONE
                     specializationSpinner.visibility = View.GONE
                 }
             }
-            
+
             override fun onNothingSelected(parent: AdapterView<*>) {
-                // Do nothing
             }
         }
         
@@ -71,7 +78,6 @@ class MainActivity : AppCompatActivity() {
             }
             
             override fun onNothingSelected(parent: AdapterView<*>) {
-                // Do nothing
             }
         }
         
@@ -83,4 +89,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

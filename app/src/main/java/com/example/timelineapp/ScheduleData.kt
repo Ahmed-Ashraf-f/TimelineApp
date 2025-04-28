@@ -4,7 +4,8 @@ package com.example.timelineapp
 data class ScheduleItem(
     val time: String,
     val course: String,
-    val location: String
+    val location: String,
+    val doctor:String =""
 )
 
 // Static class to provide schedule data
@@ -133,32 +134,28 @@ object ScheduleData {
     }
     
     // Computer Science specialization schedule
+// Computer Science specialization schedule
     private fun getCSSchedule(day: Int): List<ScheduleItem> {
         return when (day) {
             SUNDAY -> listOf(
-                ScheduleItem("09:00 - 10:30", "Advanced Algorithms", "Hall 1"),
-                ScheduleItem("10:45 - 12:15", "Machine Learning", "Hall 2"),
-                ScheduleItem("12:30 - 14:00", "Graduation Project", "Lab 1")
+                ScheduleItem("09:00 - 10:30", "Parallel Programming", "Hall 1","Dr. Alnomery"),
+                ScheduleItem("10:45 - 12:15", "Android Programming", "Hall 2", "Dr. Rania Nashaat"),
             )
             MONDAY -> listOf(
-                ScheduleItem("09:00 - 10:30", "Compiler Design", "Hall 3"),
-                ScheduleItem("10:45 - 12:15", "Machine Learning (Lab)", "Lab 2"),
-                ScheduleItem("12:30 - 14:00", "Advanced Algorithms (Tutorial)", "Hall 4")
+                ScheduleItem("09:00 - 10:30", "Pattern Recognition", "Hall 3","Dr. Rania Ramadan"),
+                ScheduleItem("10:45 - 12:15", "Android Programming (Lab)", "Lab 2", "Dr. Toaa"),
+                ScheduleItem("12:30 - 14:00", "Parallel Programming (Tutorial)", "Hall 4","Dr. Abo Al-Saud")
             )
             TUESDAY -> listOf(
-                ScheduleItem("09:00 - 10:30", "Compiler Design (Lab)", "Lab 3"),
-                ScheduleItem("10:45 - 12:15", "Computer Graphics", "Hall 1"),
-                ScheduleItem("12:30 - 14:00", "Graduation Project", "Lab 1")
+                ScheduleItem("09:00 - 10:30", "Pattern Recognition (Lab)", "Lab 3","Dr. Nourhan"),
+                ScheduleItem("10:45 - 12:15", "Image Processing", "Hall 1","Dr. Rania Ramadan"),
             )
             WEDNESDAY -> listOf(
-                ScheduleItem("09:00 - 10:30", "Computer Graphics (Lab)", "Lab 2"),
-                ScheduleItem("10:45 - 12:15", "Parallel Computing", "Hall 2"),
-                ScheduleItem("12:30 - 14:00", "Natural Language Processing", "Hall 3")
+                ScheduleItem("09:00 - 10:30", "Image Processing (Lab)", "Lab 2","Dr. Zyad Bahaa"),
+                ScheduleItem("10:45 - 12:15", "Computer Automation", "Hall 2","Dr. Seham"),
             )
             THURSDAY -> listOf(
-                ScheduleItem("09:00 - 10:30", "Parallel Computing (Lab)", "Lab 1"),
-                ScheduleItem("10:45 - 12:15", "Natural Language Processing (Lab)", "Lab 3"),
-                ScheduleItem("12:30 - 14:00", "Graduation Project", "Lab 2")
+                ScheduleItem("09:00 - 10:30", "Computer Automation (Lab)", "Lab 1","Dr. Saber"),
             )
             else -> emptyList()
         }

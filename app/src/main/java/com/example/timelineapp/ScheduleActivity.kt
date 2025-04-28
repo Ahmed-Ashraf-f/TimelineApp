@@ -89,6 +89,7 @@ class ScheduleActivity : AppCompatActivity() {
             val timeTextView: TextView = view.findViewById(R.id.timeTextView)
             val courseTextView: TextView = view.findViewById(R.id.courseTextView)
             val locationTextView: TextView = view.findViewById(R.id.locationTextView)
+            val DrTextView: TextView = view.findViewById(R.id.DrTextView)
         }
         
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -102,6 +103,7 @@ class ScheduleActivity : AppCompatActivity() {
             holder.timeTextView.text = item.time
             holder.courseTextView.text = item.course
             holder.locationTextView.text = item.location
+            holder.DrTextView.text = item.doctor
         }
         
         override fun getItemCount() = items.size

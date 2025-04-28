@@ -32,6 +32,13 @@
             android:layout_marginBottom="4dp"/>
 
         <TextView
+                android:id="@+id/DrTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr."
+                android:textSize="14sp"/>
+
+        <TextView
             android:id="@+id/locationTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
